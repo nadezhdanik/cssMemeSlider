@@ -13,7 +13,7 @@
 
 .slider-wrapper {
     margin: 0 auto;
-    width: 90vw;
+    width: 60vw;
     overflow: hidden;
 }
 
@@ -23,7 +23,6 @@
     height: 70vh;
     background-color: black;
     transition: .3s;
-    border-radius: 1rem;
 }
 
 .img-wrapper {
@@ -50,10 +49,14 @@
 }
 
 .text-wrapper {
+    overflow: hidden;
+    width: 60%;
+}
+
+.text-block {
     display: grid;
     grid-template-columns: repeat(4, 100%);
-    width: 60%;
-    overflow: hidden;
+    transition: .3s;
 }
 
 .text {
@@ -115,5 +118,21 @@
 }
 
 .slider-wrapper:has(#radio4:checked) .slider {
+    transform: translateX(-300%);
+}
+
+.slider-wrapper:has(#radio1:checked) .text-block {
+    transform: translateX(0);
+}
+
+.slider-wrapper:has(#radio2:checked) .text-block {
+    transform: translateX(-100%);
+}
+
+.slider-wrapper:has(#radio3:checked) .text-block {
+    transform: translateX(-200%);
+}
+
+.slider-wrapper:has(#radio4:checked) .text-block {
     transform: translateX(-300%);
 }
