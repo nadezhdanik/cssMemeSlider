@@ -11,15 +11,18 @@
     background-color: rgb(14, 14, 14);
 }
 
+.slider-wrapper {
+    margin: 0 auto;
+    width: 90vw;
+    overflow: hidden;
+}
+
 .slider {
     display: grid;
     grid-template-columns: repeat(4, 100%);
-    margin: 0 auto;
-    max-width: 58rem;
-    width: 90vw;
     height: 70vh;
     background-color: black;
-    overflow: hidden;
+    transition: .3s;
     border-radius: 1rem;
 }
 
@@ -43,7 +46,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 58rem;
     margin: 3rem auto;
 }
 
@@ -98,4 +100,20 @@
 
 .dot:active {
     background-color: rgb(14, 14, 14);
+}
+
+.slider-wrapper:has(#radio1:checked) .slider {
+    transform: translateX(0);
+}
+
+.slider-wrapper:has(#radio2:checked) .slider {
+    transform: translateX(-100%);
+}
+
+.slider-wrapper:has(#radio3:checked) .slider {
+    transform: translateX(-200%);
+}
+
+.slider-wrapper:has(#radio4:checked) .slider {
+    transform: translateX(-300%);
 }
