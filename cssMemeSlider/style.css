@@ -74,7 +74,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: .7rem;
     cursor: pointer;
 }
 
@@ -86,6 +86,7 @@
     border-radius: 50%;
     border: .2rem solid white;
     cursor: pointer;
+    transition: .3s;
 }
 
 .label:hover {
@@ -99,6 +100,10 @@
 
 .radio:checked, .radio:active {
     background-color: rgb(14, 14, 14)
+}
+
+.radio:checked:hover, .radio:active:hover {
+    border-color: rgb(114, 126, 126);
 }
 
 .dot:active {
